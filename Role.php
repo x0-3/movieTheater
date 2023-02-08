@@ -5,6 +5,7 @@ class Role{
     private $roleName;
     private array $movieCasts;
 
+
     // construct
     public function __construct($roleName)
     {
@@ -12,17 +13,20 @@ class Role{
         $this-> movieCasts = [];
     }
 
+
     // getter
     public function getRoleName()
     {
         return $this->roleName;
     }
 
+
     // setter
     public function setRoleName()
     {
         $this->roleName;
     }
+
 
     // add $movieCasts in an array
     public function addMovieCast(MovieCast $movieCast){
@@ -33,7 +37,13 @@ class Role{
         foreach($this->movieCasts as $movieCast){
             echo $movieCast;
         }
+    }
 
+
+    // to string
+    public function __toString()
+    {
+        return "role name : {$this-> roleName} ";
     }
 }
 

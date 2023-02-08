@@ -9,17 +9,20 @@ class Actor{
         $this->movieCasts= [];
     }
 
+    
     // getter
     public function getPerson()
     {
         return $this->person;
     }
  
+
     // setter
     public function setPerson()
     {
         $this->person;
     }
+
 
     // add $movieCasts in an array
     public function addMovieCast(MovieCast $movieCast){
@@ -31,5 +34,11 @@ class Actor{
             echo $movieCast;
         }
 
+    }
+
+    // to string
+    public function __toString()
+    {
+        return "name : {$this->person} ";
     }
 }

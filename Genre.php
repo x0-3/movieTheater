@@ -5,10 +5,13 @@ class Genre{
     private $genreName;
     private array $movies;
 
+
+    // construct
     public function __construct($genreName){
         $this->genreName = $genreName;
         $this->movies= [];
     }
+
 
     // setter
     public function setGenreName()
@@ -16,6 +19,7 @@ class Genre{
         $this->genreName;
     } 
 
+    
     // getter
     public function getGenreName()
     {
@@ -32,5 +36,12 @@ class Genre{
         foreach($this->movies as $movie){
             echo $movie;
         }
+    }
+
+
+    // to string
+    public function __toString()
+    {
+        return "Genre :". $this->genreName;
     }
 }

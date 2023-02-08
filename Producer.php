@@ -36,6 +36,11 @@ class Producer{
             echo $movie;
         }
     }
+
+    public function __toString()
+    {
+        return "person : {$this->person}";
+    }
    
 }
 
@@ -46,6 +51,8 @@ class Person extends Producer{
     private $gender;
     private $birthday;
 
+    
+    // construct
     public function __construct($familyName,$name,$gender,$birthday)
     {
         $this-> familyName =$familyName;
@@ -53,6 +60,7 @@ class Person extends Producer{
         $this-> gender =$gender;
         $this-> birthday =$birthday;
     }
+
 
     // setter
     public function setFamilyName()
@@ -71,6 +79,7 @@ class Person extends Producer{
     {
         $this->birthday;
     }
+
 
     // getter
     public function getFamilyName()
@@ -91,5 +100,12 @@ class Person extends Producer{
     public function getBirthday()
     {
         return $this->birthday;
+    }
+
+
+    // to string
+    public function __toString()
+    {
+        return "name : {$this-> familyName}{$this-> name} gender : {$this-> gender} birthday: {$this-> birthday} ";
     }
 }

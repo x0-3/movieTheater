@@ -13,11 +13,12 @@ class Movie{
 
 
     // Construct function
-    public function __construct($title,$releaseDate,$runningTime,$synopsis,Genre $genre,Producer $producer){
+    public function __construct($title,$releaseDate,$runningTime,$synopsis,$poster,Genre $genre,Producer $producer){
         $this->title = $title;
         $this->releaseDate = $releaseDate;
         $this->runningTime = $runningTime;
         $this->synopsis = $synopsis;
+        $this->poster = $poster;
         $this->genre = $genre;
         $genre->addMovies($this);
         $this->producer = $producer;
@@ -95,5 +96,18 @@ class Movie{
         foreach($this->movieCasts as $movieCast){
             echo $movieCast;
         }
+    }
+
+
+    // to string
+    public function __toString()
+    {
+        return "Movie title : {$this->title}
+        release date : {$this->releaseDate}
+        Time : {$this->runningTime}
+        synopsis : {$this->synopsis}
+        Poster : {$this->poster}
+        genre : {$this->genre}
+        producer : {$this->producer}";
     }
 }

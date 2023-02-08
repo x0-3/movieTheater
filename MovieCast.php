@@ -6,6 +6,7 @@ class MovieCast{
     private Actor $actor;
     private Role $role;
 
+    
     // construct
     public function __construct(Movie $movie, Actor $actor, Role $role)
     {
@@ -16,6 +17,7 @@ class MovieCast{
         $this->role = $role;
         $role->addMovieCast($this);
     }
+
 
     // setter
     public function setMovie()
@@ -48,5 +50,13 @@ class MovieCast{
         return $this->role;
     }
 
+
+    // to string
+    public function __toString()
+    {
+        return "Movie : {$this->movie}
+        Actor : {$this->actor}
+        Role played : {$this->role}";
+    }
 
 }
