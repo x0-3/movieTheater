@@ -32,6 +32,26 @@ $movieCast1 = new MovieCast($movie1,$actor1,$role1);
 $movieCast2 = new MovieCast($movie2,$actor2,$role1);
 $movieCast3 = new MovieCast($movie3,$actor3,$role1);
 
+
+// settings for star wars
+$person4= new Person("Ford","Harrison","male","06-05-1961");
+$person5= new Person("Hamill","Mark","male","06-05-1961");
+
+$actor4= new Actor($person4);
+$actor5= new Actor($person5);
+
+$role2= new Role("Han Solo");
+$role3= new Role("Luke Skywalker");
+
+$genre2= new Genre("Sci-fi");
+
+$personP2= new Person("George","Lucas","male","02-12-1945");
+$producer2 = new Producer($personP2);
+
+$movie4 = new Movie("Star Wars Episode IV,","19-08-1977","2h 1","synopsis","poster",$genre2,$producer2);
+
+$movieCast4 = new MovieCast($movie4,$actor4,$role2);
+$movieCast5 = new MovieCast($movie4,$actor5,$role3);
 ?>
 
 <!DOCTYPE html>
@@ -48,16 +68,19 @@ $movieCast3 = new MovieCast($movie3,$actor3,$role1);
     // list of actors that played the same role
     echo "<h1>". $role1 ."</h1>";
     echo $role1->showMovieCast();
+ 
+
+    // list of a movie casting 
+    echo "<h1> Movie casting for Star Wars </h1>";
+    echo $movie4;
+    echo $movie4->showMovieCast();
 
 
-    
-    
-    
-    
-    
-    
+    // list movies by genres
+    echo "<h1> genre Action </h1>";
+    echo $genre1->showMovies();
 
-
+    
     ?>
 
 </body>
