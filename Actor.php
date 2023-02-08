@@ -39,6 +39,6 @@ class Actor{
     // to string
     public function __toString()
     {
-        return "name : {$this->person} ";
+        return "</br>{$this->person} ";
     }
 }

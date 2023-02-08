@@ -39,7 +39,7 @@ class Producer{
 
     public function __toString()
     {
-        return "person : {$this->person}";
+        return "{$this->person}";
     }
    
 }
@@ -106,6 +106,6 @@ class Person extends Producer{
     // to string
     public function __toString()
     {
-        return "name : {$this-> familyName}{$this-> name} gender : {$this-> gender} birthday: {$this-> birthday} ";
+        return "name : {$this-> familyName} {$this-> name}</br> gender : {$this-> gender}</br> birthday: {$this-> birthday} ";
     }
 }

@@ -42,6 +42,6 @@ class Genre{
     // to string
     public function __toString()
     {
-        return "Genre :". $this->genreName;
+        return "Genre : ". $this->genreName;
     }
 }
