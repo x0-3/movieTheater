@@ -107,8 +107,7 @@ class Movie{
         Time : {$this->runningTime}</br>
         synopsis : {$this->synopsis}</br>
         Poster : {$this->poster}</br>
-        {$this->genre}</br>
-        ";
+        {$this->genre}</br>";
     }
 }
 

@@ -2,10 +2,9 @@
 
 class Producer extends Person{
     // attribute
-
     private array $movies;
 
-
+    // construct
     public function __construct($familyName,$name,$gender,$birthday){
         parent::__construct($familyName,$name,$gender,$birthday);
         $this->movies= [];

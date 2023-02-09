@@ -7,10 +7,6 @@ spl_autoload_register(function ($class_name) {
 
 
 // the role for Batman
-// $person1= new Person("Keaton","Michael","male","05-09-1951");
-// $person2= new Person("Kilmer","Val","male","31-12-1959");
-// $person3= new Person("Clooney","George","male","06-05-1961");
-
 $actor1= new Actor("Keaton","Michael","male","05-09-1951");
 $actor2= new Actor("Kilmer","Val","male","31-12-1959");
 $actor3= new Actor("Clooney","George","male","06-05-1961");
@@ -19,7 +15,6 @@ $role1= new Role("Batman");
 
 $genre1= new Genre("Action");
 
-// $personP1= new Person("Reeves","Matt","male","02-12-1945");
 $producer1 = new Producer("Reeves","Matt","male","02-12-1945");
 
 $movie1 = new Movie("Batman 1","07-04-1915","2h 55m","synopsis","poster",$genre1,$producer1);
@@ -33,9 +28,6 @@ $movieCast3 = new MovieCast($movie3,$actor3,$role1);
 
 
 // settings for star wars
-// $person4= new Person("Ford","Harrison","male","13-07-1942");
-// $person5= new Person("Hamill","Mark","male","06-05-1961");
-
 $actor4= new Actor("Ford","Harrison","male","13-07-1942");
 $actor5= new Actor("Hamill","Mark","male","06-05-1961");
 
@@ -44,7 +36,6 @@ $role3= new Role("Luke Skywalker");
 
 $genre2= new Genre("Sci-fi");
 
-// $personP2= new Person("George","Lucas","male","02-12-1945");
 $producer2 = new Producer("George","Lucas","male","02-12-1945");
 
 $movie4 = new Movie("Star Wars Episode IV","19-08-1977","2h 1m","synopsis","poster",$genre2,$producer2);
@@ -55,14 +46,11 @@ $movieCast5 = new MovieCast($movie4,$actor5,$role3);
 
 
 // blade runner
-// $person7= new Person("Hauer","Rutger","male","23-01-1944");
-
 $actor7= new Actor("Hauer","Rutger","male","23-01-1944");
 
 $role4= new Role("Rick Deckard");
 $role5= new Role("Roy Batty");
 
-// $personP3= new Person("Deeley","Michael","male","06-08-1932");
 $producer3 = new Producer("Deeley","Michael","male","06-08-1932");
 
 $movie5 = new Movie("Blade Runner","15-09-1982","1h 57m","synopsis","poster",$genre2,$producer3);
@@ -73,10 +61,6 @@ $movieCast7 = new MovieCast($movie5,$actor7,$role5);
 
 
 // The italian job
-// $person8= new Person("Statham","Jason","male","26-07-1967");
-// $person9= new Person("Wahlberg","Mark","male","05-06-1971");
-// $person10= new Person("Theron","Charlize","female","07-08-1975");
-
 $actor8= new Actor("Statham","Jason","male","26-07-1967");
 $actor9= new Actor("Wahlberg","Mark","male","05-06-1971");
 $actor10= new Actor("Theron","Charlize","female","07-08-1975");

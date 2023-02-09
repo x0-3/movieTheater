@@ -2,9 +2,10 @@
 // include "Person.php";
 
 class Actor extends Person{
-
+    // attribute
     private array $movieCasts;
 
+    // construct
     public function __construct($familyName,$name,$gender,$birthday){
         parent::__construct($familyName,$name,$gender,$birthday);
         $this->movieCasts= [];
