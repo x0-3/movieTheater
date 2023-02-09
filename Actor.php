@@ -9,13 +9,6 @@ class Actor{
         $this->movieCasts= [];
     }
 
-    
-    // getter
-    public function getPerson()
-    {
-        return $this->person;
-    }
- 
 
     // setter
     public function setPerson()
@@ -23,6 +16,12 @@ class Actor{
         $this->person;
     }
 
+    // getter
+    public function getPerson()
+    {
+        return $this->person;
+    }
+ 
 
     // add $movieCasts in an array
     public function addMovieCast(MovieCast $movieCast){

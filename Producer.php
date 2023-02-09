@@ -13,15 +13,13 @@ class Producer{
 
 
     // setter
-    public function setPerson()
-    {
+    public function setPerson(){
         $this->person;
     }
 
 
     // getter
-    public function getPerson()
-    {
+    public function getPerson(){
         return $this->person;
     }
 
@@ -37,8 +35,7 @@ class Producer{
         }
     }
 
-    public function __toString()
-    {
+    public function __toString(){
         return "{$this->person}";
     }
    
@@ -53,8 +50,7 @@ class Person extends Producer{
 
     
     // construct
-    public function __construct($familyName,$name,$gender,$birthday)
-    {
+    public function __construct($familyName,$name,$gender,$birthday){
         $this-> familyName =$familyName;
         $this-> name =$name;
         $this-> gender =$gender;
@@ -63,49 +59,48 @@ class Person extends Producer{
 
 
     // setter
-    public function setFamilyName()
-    {
+    public function setFamilyName(){
         $this->familyName;
     }
-    public function setName()
-    {
+    public function setName(){
         $this->name;
     }
-    public function setGender()
-    {
+    public function setGender(){
         $this->gender ;
     }
-    public function setBirthday()
-    {
+    public function setBirthday(){
         $this->birthday;
     }
 
 
     // getter
-    public function getFamilyName()
-    {
+    public function getFamilyName(){
         return $this->familyName;
     }
 
-    public function getName()
-    {
+    public function getName(){
         return $this->name;
     }
 
-    public function getGender()
-    {
+    public function getGender(){
         return $this->gender;
     }
 
-    public function getBirthday()
-    {
+    public function getBirthday(){
         return $this->birthday;
     }
 
+    // calculate the age of a person with the current date 
+    public function age(){
+        $date= new DateTime();
+        $birthday = new DateTime($this->getBirthday());
+        $diff= $birthday->diff($date)->format("%Y years old");
+        return $diff;
+    }
 
     // to string
     public function __toString()
     {
-        return "name : {$this-> familyName} {$this-> name}</br> gender : {$this-> gender}</br> birthday: {$this-> birthday} ";
+        return "name : {$this-> familyName} {$this-> name}</br> gender : {$this-> gender}</br> birthday: {$this-> birthday}</br>{$this-> age()} ";
     }
 }

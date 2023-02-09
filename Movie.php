@@ -108,7 +108,7 @@ class Movie{
         synopsis : {$this->synopsis}</br>
         Poster : {$this->poster}</br>
         {$this->genre}</br>
-        producer : </br>{$this->producer}</br>";
+        ";
     }
 }
 
