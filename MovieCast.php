@@ -54,8 +54,8 @@ class MovieCast{
     // to string
     public function __toString()
     {
-        return "</br>{$this->movie->getTitle()}</br> {$this->actor}</br>
-        {$this->role}</br>";
+        return "<h3 class='uk-text-bold uk-heading-bullet'>{$this->movie->getTitle()}</h3> {$this->getActor()}</br>
+         {$this->getRole()}</br>";
     }
-
+    
 }

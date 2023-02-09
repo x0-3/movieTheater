@@ -123,34 +123,42 @@ $movieCast10 = new MovieCast($movie6,$actor10,$role8);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.21/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
 <body>
 
     <?php
     // list of actors that played the same role
-    echo "<h1>". $role1 ."</h1>";
+    echo "<h1 class='uk-heading-divider uk-text-center uk-text-bold'>". $role1 ."</h1>";
     echo $role1->showMovieCast();
+    // remove the role name
  
 
     // list of a movie casting 
-    echo "<h1> Movie casting for ". $movie4->getTitle() ."</h1>";
-    echo $movie4->showMovieCast();
+    echo "<h1 class='uk-heading-divider uk-text-center uk-text-bold'> Movie casting for ". $movie4->getTitle() ."</h1>";
+    echo $movie4->showMovieCast(); 
 
 
     // list movies by genres
-    echo "<h1> genre Si-fi </h1>";
+    echo "<h1 class='uk-heading-divider uk-text-center uk-text-bold'> $genre2 </h1>";
+    echo "<h4 class=''> Number of movies stored in that genre is : <span class='uk-text-bolder'>". $genre2->numberMovies() ."</span></h4>" ;
     echo $genre2->showMovies();
 
     
     // list of movies by actors
-    echo "<h1> filmatographie de ". $person4->getName()." ". $person4->getFamilyName() ." </h1>";
+    echo "<h1 class='uk-heading-divider uk-text-center uk-text-bold'> Filmography of ". $person4->getName()." ". $person4->getFamilyName() ." </h1>";
     echo $actor4->showMovieCast();
+    // title of movies only
  
     
     // list of movies by producer
-    echo "<h1> filmatographie de ". $personP3->getName()." ". $personP3->getFamilyName() ." </h1>";
+    echo "<h1 class='uk-heading-divider uk-text-center uk-text-bold'> Filmography of ". $personP3->getName()." ". $personP3->getFamilyName() ." </h1>";
     echo $producer3->showMovies();
+    // title of movies only
     ?>
+
+    
 
 </body>
 </html>

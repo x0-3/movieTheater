@@ -38,6 +38,12 @@ class Genre{
         }
     }
 
+    // get the number of movies for a genre
+    public function numberMovies(){
+        $nbMovies= count($this->movies);
+        return $nbMovies;
+    }
+
 
     // to string
     public function __toString()

@@ -43,9 +43,10 @@ class Role{
     // to string
     public function __toString()
     {
-        return "role name : {$this-> roleName} ";
+        return "Role : {$this-> roleName} ";
     }
-}
 
+
+}
 
 
