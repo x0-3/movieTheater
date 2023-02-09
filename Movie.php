@@ -102,8 +102,8 @@ class Movie{
     // to string
     public function __toString()
     {
-        return "</br> Movie title : {$this->title}</br>
-        release date : {$this->releaseDate}</br>
+        return "</br> Movie : {$this->title}</br>
+        </br> release date : {$this->releaseDate}</br>
         Time : {$this->runningTime}</br>
         synopsis : {$this->synopsis}</br>
         Poster : {$this->poster}</br>
